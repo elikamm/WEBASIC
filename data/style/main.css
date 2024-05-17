@@ -1,0 +1,70 @@
+:root {
+    --front: #3f33a0;
+    --back: #7b6fd9;
+}
+
+body {
+    background: var(--back);
+    user-select: none;
+    overflow: hidden;
+    background-position: center;
+    background-size: 80vmin 80vmin;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--front);
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(calc(100vw / 1.22), calc(100vh * 1.22));
+    height: fit-content;
+}
+
+#frame {
+    position: relative;
+    image-rendering: pixelated;
+    width: 100%;
+    cursor: cell;
+}
+
+#links {
+    position: relative;
+    left: 50%;
+    height: min(calc(5vw / 1.22), calc(5vh * 1.22));
+    width: fit-content;
+    transform: translateX(-50%);
+}
+.link {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: transparent;
+    cursor: pointer;
+    opacity: .4;
+}
+.link svg {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    fill: var(--front);
+}
+.link:hover {
+    opacity: .6;
+}
+.link:active {
+    opacity: .5;
+}
+
+#error {
+    position: relative;
+    float: left;
+    text-align: center;
+    font-size: 3vmin;
+    width: 100%;
+    margin-bottom: 3%;
+}
